@@ -1,0 +1,22 @@
+﻿body {
+    background-color: greenyellow;
+    background-image: url("./background.jpg");
+    background-size: cover;
+}
+
+
+#navbarContent ul li {
+    display: inline-block;
+    font: 20px;
+    text-decoration: none;
+    padding: 30px;
+}
+
+#ib {
+    background-color: transparent;
+    background-image: url("./background.jpg");
+    background-size: cover;
+    padding-top: 90px;
+    height: 500px;
+    text-align: center;
+}

@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewData["Title"] = "customerRecord";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - del3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="~/css/sheet1.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+    <div id="Content">
+        <nav class="navbar navbar-light" style="background-color: black" id="navbarContent">
+            <!-- Navbar content -->
+
+
+            <ul class="content" id="Content1">
+                <li class="active">@Html.ActionLink("Home", "Index", "Customers")</li>
+                <li>@Html.ActionLink("Schedule", "Index", "Buses")</li>
+                <li>@Html.ActionLink("Track-Record", "Index", "Bookings")</li>
+                <li>@Html.ActionLink("About us", "Index", "Customers")</li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Time
+                </th>
+                <th>
+
+                    Bus-Id
+                </th>
+                <th>
+                    User-name
+                </th>
+                <th>
+                    Booking-Id
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <br />
+            <tr>
+                <td>
+                    @item.time
+                </td>
+                <td>
+                    @item.busIdForeignkey
+                </td>
+                <td>
+                    @item.userIdForeignkey
+                </td>
+
+                <td>
+                    @item.bookingID
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.bookingID">cancel booking</a> |
+               
+                </td>
+                <br />
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

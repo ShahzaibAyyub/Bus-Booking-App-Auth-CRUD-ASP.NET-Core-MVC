@@ -1,0 +1,54 @@
+﻿@model finalDeliverable.Models.Bus
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bus</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.From)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.From)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.To)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.To)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.counter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.counter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.time)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.busID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

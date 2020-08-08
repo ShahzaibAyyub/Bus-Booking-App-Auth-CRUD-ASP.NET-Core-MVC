@@ -1,0 +1,75 @@
+﻿@model IEnumerable<finalDeliverable.Models.Customer>
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "LoginFetcher";
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - del3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/profile.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: black" id="navbarContent">
+        <!-- Navbar content -->
+
+        <ul class="content" id="Content1">
+            <li class="active">@Html.ActionLink("Home", "Index", "Customers")</li>
+            <li>@Html.ActionLink("Schedule", "Index", "Buses")</li>
+            <li>@Html.ActionLink("Track-Record", "trackRecord", "Customers")</li>
+            <li>@Html.ActionLink("About us", "Index", "Customers")</li>
+        </ul>
+
+    </nav>
+
+
+
+    <div class="row" id="row1">
+
+        <span class="text1">
+
+            welcome  @httpContextAccessor.HttpContext.Session.GetString("Name")
+        </span>
+
+        <span class="text2">
+
+
+        </span>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+

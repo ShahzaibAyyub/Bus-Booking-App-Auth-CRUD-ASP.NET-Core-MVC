@@ -1,0 +1,52 @@
+﻿
+
+body {
+    background-color: greenyellow;
+    background-image: url("./background.jpg");
+    background-size: cover;
+}
+
+
+#navbarContent ul li {
+    display: inline-block;
+    font: 20px;
+    text-decoration: none;
+    padding: 30px;
+}
+
+.profile h1 {
+    padding-left: 700px;
+}
+
+
+#row1 {
+    height: 500px;
+   
+    background-size: cover;
+}
+
+    #row1 span {
+        display: block;
+    }
+
+
+.text1 {
+    padding-top: 200px;
+    padding-left: 400px;
+    font-size: 60px;
+    font-weight: 700;
+    position: relative;
+    animation: text 3s 1;
+    letter-spacing: 8px;
+}
+
+@keyframes text {
+    0% {
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+}

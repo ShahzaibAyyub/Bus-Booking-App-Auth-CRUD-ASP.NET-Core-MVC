@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\ABN TRADER\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ABN TRADER\\.nuget\\packages"
+    ]
+  }
+}

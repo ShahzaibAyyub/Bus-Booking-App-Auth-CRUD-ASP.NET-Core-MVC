@@ -1,0 +1,48 @@
+﻿body {
+    background-color: greenyellow;
+    background-image: url("./background.jpg");
+    background-size: cover;
+}
+
+
+#Content ul li {
+    display: inline-block;
+    font: 20px;
+    text-decoration: none;
+    padding: 30px;
+}
+#bg {
+    background-color: transparent;
+    background-image: url("./background.jpg");
+    background-size: cover;
+    padding-top: 90px;
+    height: 500px;
+    text-align: center;
+}
+
+
+
+#firstRow {
+    padding-top: 90px;
+    background-image: url("./background.jpg");
+    height: 550px;
+    background-size: cover;
+    text-align: center;
+    animation-name: example;
+}
+
+
+
+
+
+
+
+#title {
+    font-size: 60px;
+    text-decoration-color: burlywood;
+}
+
+    #title h1 {
+        font-size: 60px;
+        font-weight: 600;
+    }

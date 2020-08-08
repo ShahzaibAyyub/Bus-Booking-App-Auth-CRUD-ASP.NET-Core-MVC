@@ -1,0 +1,89 @@
+﻿@model finalDeliverable.Models.Customer
+
+
+@{
+    ViewData["Title"] = "loginTrigger";
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - del3</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/sheet1.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+    <div id="Content">
+        <nav class="navbar navbar-light" style="background-color: black" id="navbarContent">
+            <!-- Navbar content -->
+
+            <ul class="content" id="Content1">
+                <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Signup", "Create", "Customers")</li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+    @using (Html.BeginForm("LoginFetcher", "Customers", FormMethod.Get))
+    {
+        <div class="row" id="ib">
+
+            <div class="col-md-4">
+
+
+            </div>
+
+            <div class="col-md-3">
+                <form asp-action="loginTrigger">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="name" class="control-label"></label>
+                        <input asp-for="name" class="form-control" />
+                        <span asp-validation-for="name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="passward" class="control-label"></label>
+                        <input asp-for="passward" class="form-control" />
+                        <span asp-validation-for="passward" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </div>
+                </form>
+
+                <div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    }
+
+</body>
+
+</html>

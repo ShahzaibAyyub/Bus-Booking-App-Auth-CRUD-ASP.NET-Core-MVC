@@ -1,0 +1,47 @@
+﻿@model IEnumerable<finalDeliverable.Models.Booking>
+
+@{
+    ViewData["Title"] = "customerRecordAsync";
+}
+
+<h1>customerRecordAsync</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bus)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bus.busID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.bookingID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.bookingID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.bookingID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

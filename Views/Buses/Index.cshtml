@@ -1,0 +1,118 @@
+﻿@model IEnumerable<finalDeliverable.Models.Bus>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - del3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="~/css/sheet1.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+    <div id="Content">
+        <nav class="navbar navbar-light" style="background-color: black" id="navbarContent">
+            <!-- Navbar content -->
+
+            <ul class="content" id="Content1">
+                <li class="active">@Html.ActionLink("Home", "Index", "Customers")</li>
+                <li>@Html.ActionLink("Schedule", "Index", "Buses")</li>
+                <li>@Html.ActionLink("Track-Record", "trackRecord", "Customers")</li>
+                <li>@Html.ActionLink("About us", "Index", "Customers")</li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.From)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.To)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Capacity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.counter)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.time)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.From)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.To)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Capacity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.counter)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.time)
+                    </td>
+                    <td>
+
+                        @if (DateTime.Compare(item.time, System.DateTime.Now) > 0)
+                        {
+                            <a asp-action="Details2" asp-route-id="@item.busID">book seat</a>
+                        }
+                        else
+                        {
+                            <h5>booking time expired</h5>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>
+</html>
