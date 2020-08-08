@@ -1,6 +1,6 @@
 # Bus Booking App with Authentication and CRUD on ASP.NET Core MVC
 
-![alt-text](https://github.com/ShahzaibAyyub/React-Food-Cart-WebApplication/blob/master/ReactFoodApp.gif)
+![alt-text](https://github.com/ShahzaibAyyub/Bus-Booking-App-Auth-CRUD-ASP.NET-Core-MVC/blob/master/Asp.net%20Bus%20booking%20App.gif)
 
 This is a bus booking app on ASP.Net Core that performs login/signup functionalities on customer. Customer can view schedule/Timetable of available bookings and Book an empty slot, that slot is now not vacant and now customer can access his/her booking details after logging in. 
 
