@@ -22,4 +22,4 @@ IIS EXPRESS
 * Hamza Zafar
 * Huda Abid
 
-### Feel free to use this Food App and make changes as you wish. Thanks and Happy Coding!
+### Feel free to use this App and make changes as you wish. Thanks and Happy Coding!
